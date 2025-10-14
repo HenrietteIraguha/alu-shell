@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#a script that To infinity and beyond with sleep 2 iteration and I am Invincible!!! when receiving a SIGTERM signal
+#a script that To infinity and beyond with sleep 2 iteration and I am Invincible!!! when receiving a SIGTERM signal.
 trap "echo 'I am invincible!!!'; exit 0" SIGTERM
 
 while true; do
