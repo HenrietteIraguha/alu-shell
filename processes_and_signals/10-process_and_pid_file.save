@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Create PID file 
+
+function love() {
+    rm -f /var/run/myscript.pid
+    exit
+}
+
+# Trap signals
+trap "echo I hate the kill command; love" SIGTERM SIGQUIT
+trap "echo Y U no love me?!" SIGINT
+
+# Write PID to file
+echo $$ > /var/run/myscript.pid
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
